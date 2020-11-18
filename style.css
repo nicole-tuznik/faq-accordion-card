@@ -4,87 +4,26 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: Kumbh Sans, sans-serif;
   font-size: 12px;
   color: hsl(238, 29%, 16%);
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  line-height: 1.2;
-}
-
-.card-centered {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.faq-card {
-  background: #ffffff;
+  min-height: 100vh;
   padding: 2rem;
-  width: 60%;
-  margin: 6rem;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.img {
-  left: -45;
-  display: block;
-  margin-left: -25%;
-}
-
-#pattern {
-  display: block;
-}
-
-#box-img {
-  position: absolute;
-  left: 10%;
-  top: 45%;
-}
-
-
-.questions {
-  margin: 0.4rem 1rem;
-  padding: 0.3rem 0;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 300px;
-}
-
-h4::after {
-  content: url(./images/icon-arrow-down.svg);
-  position: absolute;
-  right: 27%;
-}
-.arrow-active h4::after {
-  transform: rotate(180deg);
-}
-
-.faq {
-  padding: 1rem;
-  width: 50%;
+  justify-content: center;
 }
 
 p {
   padding: 0.5rem 0;
 }
 
-.faq-text {
-  display: none;
-}
-
-.show-text .faq-text {
-  display: inline-block;
-}
-
 h2 {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 h4 {
@@ -93,20 +32,69 @@ h4 {
   padding: 0.5rem 0;
 }
 
+h4::after {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  right: 23%;
+}
+
 h4:hover {
   color: hsl(14, 88%, 65%);
   cursor: pointer;
 }
 
-hr {
-  margin: 0.5rem 1rem;
-  padding: auto;
-  color: hsl(240, 5%, 91%);
-  opacity: 25%;
-  width: 100%;
-
+.show-text h4 {
+  font-weight: bold;
 }
 
-.active h4 {
-  font-weight: bold;
+.show-text h4::after {
+  transform: rotate(180deg);
+}
+.show-text .faq-text {
+  margin-right: 15%;
+}
+
+.faq-card {
+  background: #ffffff;
+  /* padding: 2rem; */
+  width: 70%;
+  height: 450px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: url(./images/illustration-woman-online-desktop.svg) no-repeat center right, url(./images/bg-pattern-desktop.svg) no-repeat center right; 
+}
+
+.box {
+  position: absolute;
+  top: 170px;
+  left: -99px;
+}
+
+.faq {
+  flex: 1;
+  padding: 3rem;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  border-bottom: hsl(240, 5%, 91%) 1px solid;
+  padding: 0.75rem 0;
+}
+
+.faq-text {
+  display: none;
+}
+
+.show-text .faq-text {
+  display: inline-block;
 }

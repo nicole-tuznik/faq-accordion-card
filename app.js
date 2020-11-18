@@ -8,13 +8,9 @@ questions.forEach(function(question){
     questions.forEach(function(item){
       if(item !== question){
         item.classList.remove('show-text');
-        item.classList.remove('active');
-        item.classList.remove('arrow-active');
       }
     });
     
     question.classList.toggle('show-text');
-    question.classList.toggle('active');
-    question.classList.toggle('arrow-active');
   });
 });
