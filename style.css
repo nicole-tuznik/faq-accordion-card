@@ -50,15 +50,11 @@ h4:hover {
 .show-text h4::after {
   transform: rotate(180deg);
 }
-.show-text .faq-text {
-  margin-right: 15%;
-}
 
 .faq-card {
   background: #ffffff;
-  /* padding: 2rem; */
   width: 70%;
-  height: 450px;
+  height: 27rem;
   margin: auto;
   border-radius: 10px;
   display: flex;
@@ -71,6 +67,10 @@ h4:hover {
   height: 100%;
   position: relative;
   background: url(./images/illustration-woman-online-desktop.svg) no-repeat center right, url(./images/bg-pattern-desktop.svg) no-repeat center right; 
+}
+
+.mobile-images {
+  display: none;
 }
 
 .box {
@@ -97,4 +97,51 @@ h4:hover {
 
 .show-text .faq-text {
   display: inline-block;
+  margin-right: 15%;
+}
+
+
+@media screen and (max-width: 375px) {
+  h2 {
+    text-align: center;
+  }
+  h4::after {
+    right: 15%;
+  }
+  .faq-card {
+    flex-direction: column;
+    width: 149%;
+  }
+  .img{
+    background: none;
+  }
+  .mobile-images{
+    display: inline-block;
+    position: relative;
+  }
+  #mobile-bg{
+    position: absolute;
+    left: -115px;
+    top: 9px;
+  }
+  #mobile-woman{
+    position: absolute;
+    left: -145px;
+    top: -100px;
+  }
+  .box {
+    display: none;
+  }
+  .faq {
+    flex: 3;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+  .question {
+    padding: 0.5rem;
+  }
+  .show-text .faq-text {
+    display: inline-block;
+    margin-right: 5%;
+  }
 }
