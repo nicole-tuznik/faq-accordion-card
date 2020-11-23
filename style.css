@@ -54,6 +54,7 @@ h4:hover {
 .faq-card {
   background: #ffffff;
   width: 70%;
+  max-width: 850px;
   height: 27rem;
   margin: auto;
   border-radius: 10px;
@@ -101,7 +102,7 @@ h4:hover {
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 800px) {
   h2 {
     text-align: center;
   }
@@ -111,6 +112,7 @@ h4:hover {
   .faq-card {
     flex-direction: column;
     width: 149%;
+    height: 30rem;
   }
   .img{
     background: none;
